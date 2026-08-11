@@ -1,0 +1,25 @@
+Code Review (simulação) — campos clientes.email
+
+Resumo:
+Recomendamos garantir unicidade no campo clientes.email com uma constraint UNIQUE (case-insensitive) para preservar integridade de cliente e confiabilidade de KPIs.
+
+Motivação:
+- Evita registros duplicados que inflariam contagens de clientes/pedidos.
+- Gera um índice que acelera buscas por email.
+- Define regra de negócio explícita: email é identificador de contato.
+
+Ações obrigatórias antes de aplicar a constraint:
+1) Normalizar (trim + lowercase) todos os emails.
+2) Identificar duplicatas e decidir estratégia de merge (manter menor id ou mesclar dados manualmente).
+3) Atualizar referências em tabelas relacionadas (ex.: vendas) para apontarem para o id final.
+4) Fazer backup completo do schema e dados.
+5) Rodar testes que tentem inserir duplicatas e verifiquem comportamento.
+6) Se email for obrigatórios, considerar `NOT NULL` depois da limpeza.
+
+Sugestão de arquivos a incluir no PR:
+- migrations/2026xx_add_unique_email_up.sql (up)
+- migrations/2026xx_add_unique_email_down.sql (down)
+- scripts/normalize_emails.sql (normalização e relatório de duplicatas)
+- tests/db_email_uniqueness_test.sql
+
+Aprovação condicionada ao checklist de verificação (backup + zero duplicatas).

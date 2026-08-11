@@ -1,0 +1,39 @@
+📊 Resumo da Análise de Vendas
+========================================
+
+Arquivo analisado: vendas_loja_seminovos.csv
+Shape final: (10950, 20)
+
+Colunas finais:
+ - id
+ - nome_completo
+ - idade
+ - cpf
+ - sexo
+ - estado_civil
+ - e-mail
+ - telefone
+ - cidade
+ - estado
+ - marca
+ - modelo
+ - ano_fabricacao
+ - cor
+ - valor_venda
+ - data_venda
+ - forma_pagamento
+ - valor_venda_num
+ - data_venda_dt
+ - ano_venda
+
+Resumo Estatístico (valor_venda_num):
+count     10950.000000
+mean     140826.496763
+std       63065.062154
+min       30022.290000
+25%       86208.067500
+50%      141739.645000
+75%      195105.867500
+max      249936.920000
+
+Datas válidas: 10950

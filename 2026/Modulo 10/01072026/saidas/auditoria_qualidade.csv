@@ -1,0 +1,9 @@
+﻿Categoria,Indicador,Valor,Status,Detalhe
+Volume,Movimentacoes_Analisadas,120450,OK,Quantidade total de linhas da tabela fato.
+Qualidade,Duplicatas_Exatas,12523,AVISO,Preservadas: não existe ID de transação para confirmar duplicidade indevida.
+Qualidade,Movimentos_Zerados,50623,AVISO,Preservados como dias/registros sem movimentação líquida.
+Qualidade,Excesso_Chave_Dia_Loja_Produto,42122,AVISO,"Mais de uma linha no mesmo dia, loja e produto pode representar transações distintas."
+Integridade,Tipos_Movimento_Invalidos,0,OK,Tipos aceitos: E para entrada e S para saída.
+Integridade,Precos_Abaixo_Custo,0,OK,"Pode indicar promoção, cadastro incorreto ou margem negativa."
+Cobertura,Combinacoes_Loja_Produto_Observadas,165,OK,165 observadas de 165 possíveis.
+Integridade,Produtos_Sem_Estoque_Minimo,0,OK,Todo produto cadastrado deve possuir parâmetro de estoque mínimo.

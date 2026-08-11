@@ -1,0 +1,16 @@
+Regiao,Categoria,Produto,Vendas
+Norte,Premium,Notebook Pro X,8500
+Norte,Standard,Notebook Slim,4200
+Norte,Econômico,Mouse USB,800
+Nordeste,Premium,Smartphone Ultra,9200
+Nordeste,Standard,Smartphone Lite,5300
+Nordeste,Econômico,Fone Bluetooth,1200
+Sudeste,Premium,TV 4K Vision,15000
+Sudeste,Standard,TV LED 32,7000
+Sudeste,Econômico,Controle Remoto,900
+Sul,Premium,Console Gamer,8700
+Sul,Standard,Console Slim,6400
+Sul,Econômico,Carregador USB,1100
+Centro-Oeste,Premium,Tablet Max,7800
+Centro-Oeste,Standard,Tablet Mini,4800
+Centro-Oeste,Econômico,Cabo HDMI,700

@@ -1,0 +1,13 @@
+DIAGNÓSTICO DOS CRUZAMENTOS
+===================================
+
+IDs de suporte distintos em fOcorrencias: 395
+IDs de suporte distintos em dSuporte: 44
+IDs de suporte em ocorrências sem cadastro: 352
+Exemplos de IDs de suporte sem cadastro: ['100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119']
+Ocorrencias sem cadastro em dSuporte foram mantidas na analise como 'Suporte sem cadastro (ID X)'.
+
+IDs de problema distintos em fOcorrencias: 21
+IDs de problema distintos em dProblema: 21
+IDs de problema em ocorrências sem cadastro: 0
+Exemplos de IDs de problema sem cadastro: []
