@@ -1,0 +1,61 @@
+import re
+
+senha = input("Digite uma senha: ")
+
+pontuacao = 0
+motivos = []
+
+# Verifica tamanho
+if len(senha) >= 8:
+    pontuacao += 1
+else:
+    motivos.append("tem menos de 8 caracteres")
+
+# Letra maiúscula
+if re.search(r"[A-Z]", senha):
+    pontuacao += 1
+else:
+    motivos.append("não possui letra maiúscula")
+
+# Letra minúscula
+if re.search(r"[a-z]", senha):
+    pontuacao += 1
+else:
+    motivos.append("não possui letra minúscula")
+
+# Número
+if re.search(r"[0-9]", senha):
+    pontuacao += 1
+else:
+    motivos.append("não possui número")
+
+# Caractere especial
+if re.search(r"[^A-Za-z0-9]", senha):
+    pontuacao += 1
+else:
+    motivos.append("não possui caractere especial")
+
+
+# Classificação
+if pontuacao <= 2:
+    nivel = "FRACA"
+elif pontuacao <= 4:
+    nivel = "MÉDIA"
+else:
+    nivel = "FORTE"
+
+
+print("\n--------------------------")
+print("RESULTADO DA ANÁLISE")
+print("--------------------------")
+
+print("Senha:", "*" * len(senha))
+print("Nível:", nivel)
+print("Pontuação:", pontuacao, "/ 5")
+
+if motivos:
+    print("\nPor que precisa melhorar?")
+    for motivo in motivos:
+        print("-", motivo)
+else:
+    print("\nExcelente! A senha atende a todos os critérios.")
